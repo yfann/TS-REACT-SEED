@@ -1,12 +1,14 @@
 {
-  "name": "TS-REACT-SEED",
+  "name": "ts-react-seed",
   "version": "1.0.0",
   "description": "This is a react template using typescript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "npm install",
+    "dev":"gulp",
+    "build":""
   },
-  "author": "",
+  "author": "yfann2012@163.com",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
