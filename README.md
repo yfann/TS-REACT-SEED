@@ -30,6 +30,11 @@ Integrated:
 + `npm install gulp-typescript --save-dev`
 + `npm install gulp-open --save-dev`
 + `npm install typescript --save-dev`
++ `npm install del --save-dev`
++ `npm install gulp-util --save-dev`
++ `npm install gulp-inject --save-dev`
++ `npm install gulp-swig --save-dev`
++ `npm install gulp-concat --save-dev`
 
 
 

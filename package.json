@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "init": "npm install",
-    "dev":"gulp",
-    "build":""
+    "dev": "gulp",
+    "build": ""
   },
   "author": "yfann2012@163.com",
   "license": "ISC",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-swig": "^0.8.0",
     "gulp-typescript": "^2.13.3",
+    "gulp-util": "^3.0.7",
     "typescript": "^1.8.10"
   }
 }
