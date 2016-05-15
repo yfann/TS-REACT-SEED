@@ -25,17 +25,26 @@ Integrated:
 ##Manually install dependencies
 
 + `npm init`  create package.json
-+ `npm install gulp --save-dev`
-+ `npm install gulp-connect --save-dev`
-+ `npm install gulp-typescript --save-dev`
-+ `npm install gulp-open --save-dev`
-+ `npm install typescript --save-dev`
-+ `npm install del --save-dev`
-+ `npm install gulp-util --save-dev`
-+ `npm install gulp-inject --save-dev`
-+ `npm install gulp-swig --save-dev`
-+ `npm install gulp-concat --save-dev`
-
++ `npm i gulp --save-dev`
++ `npm i gulp-connect --save-dev`
++ `npm i gulp-typescript --save-dev`
++ `npm i gulp-open --save-dev`
++ `npm i typescript --save-dev`
++ `npm i del --save-dev`
++ `npm i gulp-util --save-dev`
++ `npm i gulp-inject --save-dev`
++ `npm i gulp-swig --save-dev`
++ `npm i gulp-concat --save-dev`
++ `npm i typings --save-dev`
++ `npm i react react-dom --save`
++ `npm i gulp-browserify --save`
++ `npm i tsify --save-dev`
++ `npm i vinyl-soure-stream --save-dev`
++ `npm i gulp-sourcemaps --save-dev`
++ `npm i vinyl-buffer --save-dev`
++ `npm i gulp-uglify --save-dev`
++ `typings install --ambient --save react`   generate typings.json
++ `typings install --ambient --save react-dom`
 
 
 ##Ref

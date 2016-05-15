@@ -2,15 +2,18 @@
   "compilerOptions": {    
     "target": "es5",
     "module": "commonjs",
+    "moduleResolution":"node",
     "jsx": "react",
-    "declaration": true,
+    "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
     "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "listFiles": false
+    "listFiles": false,
+    "allowJs":true,
+    "noExternalResolve":false
   },
   "files": [
   ]
