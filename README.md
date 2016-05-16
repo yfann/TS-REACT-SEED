@@ -1,10 +1,7 @@
 #TS-REACT-SEED
 
-This is a react template using typescript.
-
-Integrated:
-+ gulp
-
+This is skeleton project using typescript and react to build frontend app.
+Build tools include typings, gulp, browserify, tsify etc.
 
 ##Command
 
