@@ -7,14 +7,14 @@ var gutil=require('gulp-util');
 var inject=require('gulp-inject');
 var swig=require('gulp-swig');
 var concat=require('gulp-concat');
-var browserify = require('browserify');
-var tsify=require('tsify');
 var source=require('vinyl-source-stream');
 var sourcemaps=require('gulp-sourcemaps');
 var buffer=require('vinyl-buffer');
 var uglify=require('gulp-uglify');
+var webpack=require('webpack')
 //var tsProj=ts.createProject('tsconfig.json');//load tsconfig for tsc compiler
 var config=require('./gulpfile.config')();
+var webpackConfig=require('./webpack.config');
 
 gulp.task('connect',function () {
     connect.server({
@@ -31,22 +31,11 @@ gulp.task('clean',function() {
 
 
 
-gulp.task('ts',['clean'],function () {
-   return browserify({
-            basedir: '.',
-            debug: true,  //debug source code
-            entries: [config.paths.main],
-            cache: {},
-            packageCache: {}
-        })
-        .plugin(tsify)
-        .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps:true}))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.paths.dist+'/scripts'));
+gulp.task('ts',['clean'],function (callback) {
+ 	webpack(webpackConfig, function(err, stats) {
+		if(err) throw new gutil.PluginError('ts', err);
+		callback();
+	});
 });
 
 gulp.task('css',['clean'],function () {

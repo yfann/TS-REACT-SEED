@@ -11,7 +11,6 @@
   "author": "yfann2012@163.com",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^13.0.1",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
@@ -21,11 +20,12 @@
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
-    "tsify": "^0.15.5",
+    "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "typings": "^0.8.1",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.13.1"
   },
   "dependencies": {
     "react": "^15.0.2",

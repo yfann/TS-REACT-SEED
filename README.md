@@ -34,19 +34,18 @@ Build tools include typings, gulp, browserify, tsify etc.
 + `npm i gulp-concat --save-dev`
 + `npm i typings --save-dev`
 + `npm i react react-dom --save`
-+ `npm i gulp-browserify --save`
-+ `npm i tsify --save-dev`
 + `npm i vinyl-soure-stream --save-dev`
 + `npm i gulp-sourcemaps --save-dev`
 + `npm i vinyl-buffer --save-dev`
 + `npm i gulp-uglify --save-dev`
++ `npm i webpack --save-dev`
 + `typings install --ambient --save react`   generate typings.json
 + `typings install --ambient --save react-dom`
 
 
 ##Branch
 
-+ GulpToTS     
++ v1.0  
 
   including gulp, browserify, tsify without webpack
 
