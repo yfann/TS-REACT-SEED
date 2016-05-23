@@ -1,14 +1,20 @@
 module.exports=function () {
+    
+    var baseOutput='./dist';
+    
     var config={
         port:8004,
         devBaseUrl:'http://localhost',
         title:'React Template',
         paths:{
-            html:'./src/app/*.html',
+            index:'./src/app/index.html',
             css:'./src/app/**/*.css',
             ts:'./src/app/**/*.{js,ts,tsx}',
-            dist:'./dist',
-            distName:'dist',
+            out:baseOutput,
+            outScript:baseOutput+'/scripts',
+            outCss:baseOutput+'/css',
+            outLib:baseOutput+'/libs',
+            outName:'dist',
             build:'./build',
             jsLib:['node_modules/react/dist/react.js',
             'node_modules/react-dom/dist/react-dom.js'],

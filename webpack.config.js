@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 
 module.exports = {
-    devtool: 'sourcemap',
+    devtool: 'source-map',
     debug: true,
     entry: {
         index:'./src/app/index.tsx',
@@ -15,9 +15,16 @@ module.exports = {
         loaders: [
             { test: /\.tsx$/, loader: 'ts-loader'},
             { test: /\.ts$/, loader: 'ts-loader'},
+        ],
+        preLoaders:[
+            {test:/\.js$/,loader:"source-map-loader"}
         ]
     },
     resolve: {
         extensions: ['', '.jsx', '.js', '.tsx', '.ts']
+    },
+    externals:{
+        "react": "React",
+        "react-dom": "ReactDOM"
     }
 };

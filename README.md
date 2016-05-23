@@ -39,6 +39,9 @@ Build tools include typings, gulp, browserify, tsify etc.
 + `npm i vinyl-buffer --save-dev`
 + `npm i gulp-uglify --save-dev`
 + `npm i webpack --save-dev`
++ `npm i ts-loader --save-dev`
++ `npm i source-map-loader --save-dev`
++ `npm i stream-series --save-dev`
 + `typings install --ambient --save react`   generate typings.json
 + `typings install --ambient --save react-dom`
 

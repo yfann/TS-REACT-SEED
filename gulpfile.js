@@ -11,14 +11,15 @@ var source=require('vinyl-source-stream');
 var sourcemaps=require('gulp-sourcemaps');
 var buffer=require('vinyl-buffer');
 var uglify=require('gulp-uglify');
-var webpack=require('webpack')
+var webpack=require('webpack');
+var series=require('stream-series');
 //var tsProj=ts.createProject('tsconfig.json');//load tsconfig for tsc compiler
 var config=require('./gulpfile.config')();
 var webpackConfig=require('./webpack.config');
 
 gulp.task('connect',function () {
     connect.server({
-        root:[config.paths.distName],
+        root:[config.paths.outName],
         port:config.port,
         base:config.devBaseUrl,
         livereload:true
@@ -26,11 +27,11 @@ gulp.task('connect',function () {
 });
 
 gulp.task('clean',function() {
-    return del([config.paths.dist]);
+    return del([config.paths.out]);
 });
 
 
-
+//need config out put path
 gulp.task('ts',['clean'],function (callback) {
  	webpack(webpackConfig, function(err, stats) {
 		if(err) throw new gutil.PluginError('ts', err);
@@ -41,29 +42,35 @@ gulp.task('ts',['clean'],function (callback) {
 gulp.task('css',['clean'],function () {
     return gulp.src(config.paths.css)
           .pipe(concat('bundle.css'))
-          .pipe(gulp.dest(config.paths.dist+'/css'));
+          .pipe(gulp.dest(config.paths.outCss));
 });
 
+gulp.task('jsLib',['clean'],function () {
+    return gulp.src(config.paths.jsLib)
+               .pipe(gulp.dest(config.paths.outLib));
+});
 
-gulp.task('html',['ts','css'],function () {
+gulp.task('index',['jsLib','ts','css'],function () {
    var swigData={
        title:config.title
    };
+   //react should be loaded firstly
+   var libSource=gulp.src([config.paths.outLib+'/react.js',config.paths.outLib+'/*.js'],{read:false});
+   var appSource=gulp.src([config.paths.outScript+'/**/*.js'],{read:false});
+   var cssSource=gulp.src([config.paths.outCss+'/**/*.css'],{read:false});
    
-   var sources=gulp.src([config.paths.dist+'/**/*.js',
-                    config.paths.dist+'/**/*.css'],{read:false});
    
-   return gulp.src(config.paths.html)
+   return gulp.src(config.paths.index)
         .pipe(swig({data:swigData}))
-        .pipe(inject(sources,{ignorePath:config.paths.distName}))
-        .pipe(gulp.dest(config.paths.dist))
+        .pipe(inject(series(libSource,appSource,cssSource),{ignorePath:config.paths.outName}))
+        .pipe(gulp.dest(config.paths.out))
         .pipe(connect.reload());
 });
 
 gulp.task('watch',function () {
     gulp.watch(config.paths.ts,['ts']);
     gulp.watch(config.paths.css,['css']);
-    gulp.watch(config.paths.html,['html']);
+    gulp.watch(config.paths.index,['index']);
 });
 
-gulp.task('default',['html','watch','connect']);
+gulp.task('default',['index','watch','connect']);
