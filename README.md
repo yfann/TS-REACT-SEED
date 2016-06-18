@@ -1,7 +1,7 @@
 #TS-REACT-SEED
 
 This is skeleton project using typescript and react to build frontend app.
-Build tools include typings, gulp, browserify, tsify etc.
+Build tools include typings, gulp, webpack etc.
 
 ##Command
 
@@ -52,6 +52,10 @@ Build tools include typings, gulp, browserify, tsify etc.
 
   including gulp, browserify, tsify without webpack
 
++ v2.0
+
+  Build typescript and react with gulp, webpack and typings
+  
 ##Ref
 
 + [TYPESCRIPT CONFIGURATION](https://angular.io/docs/ts/latest/guide/typescript-configuration.html)

@@ -55,7 +55,8 @@ gulp.task('index',['jsLib','ts','css'],function () {
        title:config.title
    };
    //react should be loaded firstly
-   var libSource=gulp.src([config.paths.outLib+'/react.js',config.paths.outLib+'/*.js'],{read:false});
+   var libSource=gulp.src([config.paths.outLib+'/react.js',
+                           config.paths.outLib+'/*.js'],{read:false});
    var appSource=gulp.src([config.paths.outScript+'/**/*.js'],{read:false});
    var cssSource=gulp.src([config.paths.outCss+'/**/*.css'],{read:false});
    
