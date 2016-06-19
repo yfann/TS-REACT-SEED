@@ -32,20 +32,20 @@ gulp.task('clean',function() {
 
 
 //need config out put path
-gulp.task('ts',['clean'],function (callback) {
+gulp.task('ts',function (callback) {
  	webpack(webpackConfig, function(err, stats) {
 		if(err) throw new gutil.PluginError('ts', err);
 		callback();
 	});
 });
 
-gulp.task('css',['clean'],function () {
+gulp.task('css',function () {
     return gulp.src(config.paths.css)
           .pipe(concat('bundle.css'))
           .pipe(gulp.dest(config.paths.outCss));
 });
 
-gulp.task('jsLib',['clean'],function () {
+gulp.task('jsLib',function () {
     return gulp.src(config.paths.jsLib)
                .pipe(gulp.dest(config.paths.outLib));
 });
@@ -74,4 +74,6 @@ gulp.task('watch',function () {
     gulp.watch(config.paths.index,['index']);
 });
 
-gulp.task('default',['index','watch','connect']);
+gulp.task('default',['clean'],function(){
+    gulp.start('index','watch','connect');
+});

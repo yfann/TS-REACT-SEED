@@ -42,6 +42,7 @@ Build tools include typings, gulp, webpack etc.
 + `npm i ts-loader --save-dev`
 + `npm i source-map-loader --save-dev`
 + `npm i stream-series --save-dev`
++ `npm i react-router --save`
 + `typings install --ambient --save react`   generate typings.json
 + `typings install --ambient --save react-dom`
 
@@ -52,7 +53,7 @@ Build tools include typings, gulp, webpack etc.
 
   including gulp, browserify, tsify without webpack
 
-+ v2.0
++ v1.1
 
   Build typescript and react with gulp, webpack and typings
   

@@ -17,7 +17,8 @@ module.exports=function () {
             outName:'dist',
             build:'./build',
             jsLib:['node_modules/react/dist/react.js',
-            'node_modules/react-dom/dist/react-dom.js'],
+            'node_modules/react-dom/dist/react-dom.js',
+            'node_modules/react-router/umd/ReactRouter.js'],
             cssLib:[],
             main:'./src/app/index.tsx'
         }
