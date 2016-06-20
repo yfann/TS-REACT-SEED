@@ -5,14 +5,14 @@ export class About extends React.Component<any,{}>{
         return (
             <div>
                 <h1>About</h1>
-                <p>This application uses the following technologies:
+                <div>This application uses the following technologies:
                     <ul>
                         <li>React</li>
                         <li>TypeScript</li>
                         <li>Gulp</li>
                         <li>Webpack</li>
                     </ul>
-                </p>
+                </div>
             </div>
             
         )

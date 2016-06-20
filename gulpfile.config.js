@@ -12,14 +12,15 @@ module.exports=function () {
             ts:'./src/app/**/*.{js,ts,tsx}',
             out:baseOutput,
             outScript:baseOutput+'/scripts',
-            outCss:baseOutput+'/css',
+            outCSS:baseOutput+'/css',
             outLib:baseOutput+'/libs',
             outName:'dist',
             build:'./build',
             jsLib:['node_modules/react/dist/react.js',
             'node_modules/react-dom/dist/react-dom.js',
             'node_modules/react-router/umd/ReactRouter.js'],
-            cssLib:[],
+            cssLib:['node_modules/bootstrap/dist/css/bootstrap.css',
+            'node_modules/bootstrap/dist/css/bootstrap-theme.css'],
             main:'./src/app/index.tsx'
         }
     }

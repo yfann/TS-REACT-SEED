@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Header} from './common/Header';
+import {Header} from './Header';
 
 export class App extends React.Component<any,{}>{
     render(){
@@ -7,6 +7,7 @@ export class App extends React.Component<any,{}>{
            <div>
             <Header/>
             <div classname="container-fluid">
+            {this.props.children}
             </div>
         </div>
        )     

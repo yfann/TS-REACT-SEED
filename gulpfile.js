@@ -42,7 +42,13 @@ gulp.task('ts',function (callback) {
 gulp.task('css',function () {
     return gulp.src(config.paths.css)
           .pipe(concat('bundle.css'))
-          .pipe(gulp.dest(config.paths.outCss));
+          .pipe(gulp.dest(config.paths.outCSS));
+});
+
+gulp.task('cssLib',function () {
+    return gulp.src(config.paths.cssLib)
+          .pipe(concat('bundle.lib.css'))
+          .pipe(gulp.dest(config.paths.outCSS));
 });
 
 gulp.task('jsLib',function () {
@@ -50,7 +56,7 @@ gulp.task('jsLib',function () {
                .pipe(gulp.dest(config.paths.outLib));
 });
 
-gulp.task('index',['jsLib','ts','css'],function () {
+gulp.task('index',['jsLib','ts','css','cssLib'],function () {
    var swigData={
        title:config.title
    };
@@ -58,7 +64,7 @@ gulp.task('index',['jsLib','ts','css'],function () {
    var libSource=gulp.src([config.paths.outLib+'/react.js',
                            config.paths.outLib+'/*.js'],{read:false});
    var appSource=gulp.src([config.paths.outScript+'/**/*.js'],{read:false});
-   var cssSource=gulp.src([config.paths.outCss+'/**/*.css'],{read:false});
+   var cssSource=gulp.src([config.paths.outCSS+'/**/*.css'],{read:false});
    
    
    return gulp.src(config.paths.index)
