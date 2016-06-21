@@ -27,6 +27,9 @@ Build tools include typings, gulp, webpack etc.
 
   Build typescript and react with gulp, webpack and typings
 
++ v1.2
+
+  Add Redux based on v1.1
 
 
 
