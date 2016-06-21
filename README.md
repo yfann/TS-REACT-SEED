@@ -17,9 +17,20 @@ Build tools include typings, gulp, webpack etc.
 
 `npm run release`
 
+##Branch
+
++ v1.0  
+
+  including gulp, browserify, tsify without webpack
+
++ v1.1
+
+  Build typescript and react with gulp, webpack and typings
 
 
-##Manually install dependencies
+
+
+##Manually install dependencies(You don't need to do this normally)
 
 + `npm init`  create package.json
 + `npm i gulp --save-dev`
@@ -43,20 +54,11 @@ Build tools include typings, gulp, webpack etc.
 + `npm i source-map-loader --save-dev`
 + `npm i stream-series --save-dev`
 + `npm i react-router --save`
-+ `typings install --ambient --save react`   generate typings.json
-+ `typings install --ambient --save react-dom`
++ `typings install react --save`
++ `typings install dt~react-dom --global --save`
++ `typings install react-router --save`
 
 
-##Branch
-
-+ v1.0  
-
-  including gulp, browserify, tsify without webpack
-
-+ v1.1
-
-  Build typescript and react with gulp, webpack and typings
-  
 ##Ref
 
 + [TYPESCRIPT CONFIGURATION](https://angular.io/docs/ts/latest/guide/typescript-configuration.html)
