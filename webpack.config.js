@@ -26,6 +26,7 @@ module.exports = {
     externals:{
         "react": "React",
         "react-dom": "ReactDOM",
-        "react-router":"ReactRouter"
+        "react-router":"ReactRouter",
+        "fixed-data-table":"FixedDataTable"
     }
 };
