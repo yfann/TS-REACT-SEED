@@ -62,7 +62,13 @@ Build tools include typings, gulp, webpack etc.
 + `typings install react --save`
 + `typings install dt~react-dom --global --save`
 + `typings install react-router --save`
++ ...
 
+##3rd libs
+
++ material-ui
++ fixed-data-table
++ react-tap-event-plugin
 
 ##Ref
 

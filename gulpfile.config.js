@@ -20,7 +20,8 @@ module.exports=function () {
             'node_modules/react-dom/dist/react-dom.js',
             'node_modules/react-router/umd/ReactRouter.js'],
             cssLib:['node_modules/bootstrap/dist/css/bootstrap.css',
-            'node_modules/bootstrap/dist/css/bootstrap-theme.css'],
+            'node_modules/bootstrap/dist/css/bootstrap-theme.css',
+            'node_modules/fixed-data-table/dist/fixed-data-table.css'],
             main:'./src/app/index.tsx'
         }
     }

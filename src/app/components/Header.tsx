@@ -7,7 +7,8 @@ export class Header extends React.Component<any,{}>{
                 <div className="container-fluid">
                     <ul className="nav navbar-nav">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/hello">Hello</Link></li>
+                        <li><Link to="/table">FixedDataTable</Link></li>
+                        <li><Link to="/materiaUI">MateriaUI</Link></li>
                         <li><Link to="/about">About</Link></li>
                     </ul>
                 </div>
