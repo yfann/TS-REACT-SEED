@@ -31,7 +31,9 @@ Build tools include typings, gulp, webpack etc.
 
   Add Redux based on v1.1
 
++ v1.3
 
+  Test 3rd libs based on v1.1
 
 ##Manually install dependencies(You don't need to do this normally)
 
