@@ -16,10 +16,12 @@ module.exports=function () {
             outLib:baseOutput+'/libs',
             outName:'dist',
             build:'./build',
-            jsLib:['node_modules/react/dist/react.js',
+            jsLib:[
+            'node_modules/react/dist/react.js',
             'node_modules/react-dom/dist/react-dom.js',
             'node_modules/react-router/umd/ReactRouter.js',
-            'node_modules/fixed-data-table/dist/fixed-data-table.js'],
+            'node_modules/fixed-data-table/dist/fixed-data-table.js'
+            ],
             cssLib:['node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/bootstrap/dist/css/bootstrap-theme.css',
             'node_modules/fixed-data-table/dist/fixed-data-table.css'],
