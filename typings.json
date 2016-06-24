@@ -6,6 +6,7 @@
   "globalDependencies": {
     "fixed-data-table": "registry:dt/fixed-data-table#0.6.0+20160425160256",
     "material-ui": "registry:dt/material-ui#0.15.0+20160618122708",
+    "react-addons-transition-group": "registry:dt/react-addons-transition-group#0.14.0+20160417134118",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-tap-event-plugin": "registry:dt/react-tap-event-plugin#0.0.0+20160602142434"
   }

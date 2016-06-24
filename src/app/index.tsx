@@ -3,14 +3,12 @@
 import * as React from 'react';
 import {render} from 'react-dom';
 import {Router,Route,Link,IndexRoute,Redirect,hashHistory} from 'react-router';
-import * as injectTapEventPlugin from 'react-tap-event-plugin';
 import { DataTable } from './components/FixedDataTable';
 import { App } from './components/App';
 import { About } from './components/About';
 import { Home } from './components/Home';
 import {MateriaTest} from './components/MateriaTest';
-
-injectTapEventPlugin();
+import ReactTransitionGroup from 'react-addons-transition-group'
 
 render(
     (<Router history={hashHistory}>

@@ -20,7 +20,8 @@ module.exports=function () {
             'node_modules/react/dist/react.js',
             'node_modules/react-dom/dist/react-dom.js',
             'node_modules/react-router/umd/ReactRouter.js',
-            'node_modules/fixed-data-table/dist/fixed-data-table.js'
+            'node_modules/fixed-data-table/dist/fixed-data-table.js',
+            'node_modules/react/dist/react-with-addons.js'
             ],
             cssLib:['node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/bootstrap/dist/css/bootstrap-theme.css',
@@ -31,7 +32,11 @@ module.exports=function () {
          "react": "React",
          "react-dom": "ReactDOM",
          "react-router":"ReactRouter",
-         "fixed-data-table":"FixedDataTable"
+         "fixed-data-table":"FixedDataTable",
+         'react-addons-transition-group': 'React.addons.TransitionGroup',
+         'react-addons-pure-render-mixin': 'React.addons.PureRenderMixin',
+         'react-addons-create-fragment': 'React.addons.createFragment',
+         'react-addons-update': 'React.addons.update'
         }
     }
     return config;
