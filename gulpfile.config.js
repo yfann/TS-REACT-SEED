@@ -26,6 +26,12 @@ module.exports=function () {
             'node_modules/bootstrap/dist/css/bootstrap-theme.css',
             'node_modules/fixed-data-table/dist/fixed-data-table.css'],
             main:'./src/app/index.tsx'
+        },
+        externals:{
+         "react": "React",
+         "react-dom": "ReactDOM",
+         "react-router":"ReactRouter",
+         "fixed-data-table":"FixedDataTable"
         }
     }
     return config;

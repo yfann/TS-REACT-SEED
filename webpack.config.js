@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-
+var config=require('./gulpfile.config')();
 
 module.exports = {
     devtool: 'source-map',
@@ -23,10 +23,5 @@ module.exports = {
     resolve: {
         extensions: ['', '.jsx', '.js', '.tsx', '.ts']
     },
-    externals:{
-        "react": "React",
-        "react-dom": "ReactDOM",
-        "react-router":"ReactRouter",
-        "fixed-data-table":"FixedDataTable"
-    }
+    externals:config.externals
 };
