@@ -54,6 +54,11 @@ Build tools include typings, gulp, webpack etc.
 + fixed-data-table
 + react-tap-event-plugin
 
+##issues
+
++ how to external material-ui?
+
 ##Ref
 
-+ [TYPESCRIPT CONFIGURATION](https://angular.io/docs/ts/latest/guide/typescript-configuration.html)
++ [tsconfig](https://angular.io/docs/ts/latest/guide/typescript-configuration.html)
++ [webpack.cofnig](https://github.com/webpack/docs/wiki/configuration#externals)
