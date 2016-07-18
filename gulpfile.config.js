@@ -16,13 +16,23 @@ module.exports=function () {
             outLib:baseOutput+'/libs',
             outName:'dist',
             build:'./build',
-            jsLib:['node_modules/react/dist/react.js',
-            'node_modules/react-dom/dist/react-dom.js',
-            'node_modules/react-router/umd/ReactRouter.js'],
-            cssLib:['node_modules/bootstrap/dist/css/bootstrap.css',
-            'node_modules/bootstrap/dist/css/bootstrap-theme.css'],
+            jsLib:[
+                'node_modules/react/dist/react.js',
+                'node_modules/react-dom/dist/react-dom.js',
+                'node_modules/react-router/umd/ReactRouter.js'
+            ],
+            cssLib:[
+                'node_modules/bootstrap/dist/css/bootstrap.css',
+                'node_modules/bootstrap/dist/css/bootstrap-theme.css'
+            ],
             main:'./src/app/index.tsx'
-        }
+        },
+       //for webpack externals
+       externals:{
+        "react": "React",
+        "react-dom": "ReactDOM",
+        "react-router":"ReactRouter"
+       }
     }
     return config;
 }
